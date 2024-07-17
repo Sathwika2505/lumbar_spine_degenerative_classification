@@ -11,7 +11,6 @@ import shutil
 # Define paths
 images_root_path = os.path.join(os.getcwd(), "extracted_files/train_images")
 output_root_path = "./output_dir"
-visualization_path = "./visualization"
 
 def read_csv_from_s3(csv_filename):
     s3 = boto3.client('s3')
@@ -72,10 +71,7 @@ for _, row in df.iterrows():
         print(f"File {source_file} does not exist")
 
 # Save random images for visualization
-num_images_to_select = 1  # Number of images to select from each folder
-
-# Create the visualization directory
-create_dir(visualization_path)
+num_images_to_select = 1 
 
 for condition_folder in os.listdir(output_root_path):
     condition_path = os.path.join(output_root_path, condition_folder)
