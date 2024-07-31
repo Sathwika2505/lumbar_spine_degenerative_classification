@@ -7,7 +7,8 @@ import pydicom
 from PIL import Image
 import random
 import shutil
-
+from data_extraction import extract_data_and_read_csv
+extract_data_and_read_csv()
 # Define paths
 images_root_path = os.path.join(os.getcwd(), "extracted_files/train_images")
 output_root_path = "./output_dir"
