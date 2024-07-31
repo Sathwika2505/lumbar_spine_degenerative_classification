@@ -7,13 +7,13 @@ import pydicom
 from PIL import Image
 import random
 import shutil
-from data_extraction import extract_data_and_read_csv
+#from data_extraction import extract_data_and_read_csv
 import boto3
 import zipfile
 from io import BytesIO
 import pandas as pd
 
-def (folder_to_extract, csv_filename, extract_to_folder):
+def extract_data_and_read_csv(folder_to_extract, csv_filename, extract_to_folder):
     s3 = boto3.client('s3')
     bucket_name = 'deeplearning-mlops-demo'
     file_key = 'rsna-2024-lumbar-spine-degenerative-classification.zip'  # Ensure this key is correct
