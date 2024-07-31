@@ -13,7 +13,7 @@ import zipfile
 from io import BytesIO
 import pandas as pd
 
-def  (folder_to_extract, csv_filename, extract_to_folder):
+def (folder_to_extract, csv_filename, extract_to_folder):
     s3 = boto3.client('s3')
     bucket_name = 'deeplearning-mlops-demo'
     file_key = 'rsna-2024-lumbar-spine-degenerative-classification.zip'  # Ensure this key is correct
